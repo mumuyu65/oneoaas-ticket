@@ -12,10 +12,10 @@
 ### 3.Technology:
 >
    python
-    html
-    css
-    jquery
-    bootstrap
+   html
+   css
+   jquery
+   bootstrap
 >
 ### 4.Run:
 >
