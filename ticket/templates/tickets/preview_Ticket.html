@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>OneOaaS Ticket工单系统</title>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <link rel="stylesheet" href="/ticket/static/assets/scripts/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/ticket/static/assets/scripts/bootstrap-daterangepicker/daterangepicker.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/ticket/static/assets/scripts/AdminLTE/AdminLTE.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="/ticket/static/assets/scripts/AdminLTE/_all-skins.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!--自定义的css样式-->
+    <link rel="stylesheet" href="/ticket/static/assets/css/styles.css"/>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<header class="main-header">
+    <!-- Logo -->
+    <a href="#" class="logo">
+        <span class="logo-mini"><b>O</b></span>
+        <span class="logo-lg"><b>OneOaas</b>工单系统</span>
+    </a>
+    <nav class="navbar navbar-/static-top">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+        </a>
+    </nav>
+</header>
+<!-- Left side column. contains the logo and sidebar -->
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu">
+            <li class="header">功能</li>
+            <li class="treeview">
+                <a href="/">
+                    <i class="glyphicon glyphicon-dashboard"></i><span>创建工单</span>
+                </a>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="glyphicon glyphicon-dashboard"></i>
+                    <span>我的工单</span>
+                    <span class="pull-right">
+                        	<i class="caret"></i>
+                    	</span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="/handlingTicket"> 处理中工单</a></li>
+                    <li><a href="/unHandleTicket"> 待处理工单</a></li>
+                    <li><a href="/handledTicket"> 已处理工单</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="/searchTicket">
+                    <i class="glyphicon glyphicon-dashboard"></i><span>查询工单</span>
+                </a>
+            </li>
+            <li class="treeview">
+                <a href="/searchKnowledge">
+                    <i class="glyphicon glyphicon-dashboard"></i><span>知识库</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <!-- /.sidebar -->
+</aside>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Main content -->
+    <section class="content">
+        <div class="preview-ticket">
+            <div class="preview-edit">
+                <ul class="list-inline">
+                    <li><h3>标题: </h3></li>
+                    <li><h3 id="preview_title"></h3></li>
+                </ul>
+                <button class="btn btn-default" id="preview_edit">编辑</button>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <textarea id="preview_content"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12" id="preview_button">
+                    <div class="pull-left">
+                        <button class="btn btn-info" id="ticket_knowledge">
+                            转为知识库
+                        </button>
+                    </div>
+                    <div class="pull-right">
+                        <button class="btn btn-default" id="ticket_return"></button>
+                        <button class="btn btn-primary" id="ticket_close_order">关闭工单</button>
+                    </div>
+                </div>
+                <!-- 编辑按钮-->
+                <div class="col-md-12 preview-edit-button" id="preview_edit_button">
+                    <div class="pull-left">
+                        <button class="btn btn-default" id="preview_cancel">
+                            取消
+                        </button>
+                    </div>
+                    <div class="pull-right">
+                        <button class="btn btn-primary" id="preview_save">保存</button>
+                    </div>
+                </div>
+            </div>
+            <div class="preview-session" id="preview_session">
+                <ul class="list-inline">
+                    <li>问题升级</li>
+                    <li><input type="text" class="form-control" /></li>
+                </ul>
+                <h5>评论区</h5>
+                <textarea style="width:100%; height:200px;">@yangyangyu</textarea>
+            </div>
+        </div>
+    </section>
+    <!-- /.content -->
+</div>
+<footer class="main-footer text-center">
+    <strong>Copyright &copy; 2017 oneoaas. All rights reserved.</strong>
+</footer>
+<!-- /.content-wrapper -->
+<!-- jQuery 2.2.3 -->
+<script type="text/javascript" src="/ticket/static/assets/scripts/jquery-2.2.3.min.js"></script>
+<!--jquery-cookie-1.4.1-->
+<script type="text/javascript" src="/ticket/static/assets/scripts/jquery.cookie.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script type="text/javascript" src="/ticket/static/assets/scripts/bootstrap/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script type="text/javascript" src="/ticket/static/assets/scripts/AdminLTE/fastclick.min.js"></script>
+<!-- AdminLTE App -->
+<script type="text/javascript" src="/ticket/static/assets/scripts/AdminLTE/app.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script type="text/javascript" src="/ticket/static/assets/scripts/AdminLTE/adminLTE.js"></script>
+
+<script type="text/javascript" src="/ticket/static/assets/scripts/tinymce/tinymce.min.js"></script>
+
+<script type="text/javascript" src="/ticket/static/assets/scripts/tinymce/langs/zh-CN.js"></script>
+
+<script type="text/javascript" src="/ticket/static/assets/js/api.js"></script>
+
+<script type="text/javascript" src="/ticket/static/assets/scripts/bootstrap-daterangepicker/moment.min.js"></script>
+
+<script type="text/javascript" src="/ticket/static/assets/scripts/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+<script type="text/javascript" src="/ticket/static/assets/js/previewTicket.js"></script>
+
+</body>
+</html>

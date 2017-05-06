@@ -1,0 +1,233 @@
+/* global styles */
+section.content{
+    min-width:1000px;
+    position: relative;
+}
+
+.ticket-icon{
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #20A0FF;
+    margin: 0 10px;
+}
+
+.dateTimer{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.dateTimer i{
+    position: absolute;
+    top:10px;
+    right:10px;
+
+}
+
+/*create ticket */
+.create-ticket>.row{
+    margin-bottom: 15px;
+}
+
+.create-ticket .row .create-ticket-item{
+    margin-bottom: 10px;
+}
+
+.create-ticket .row .create-ticket-item label{
+    width:60px;
+}
+
+.create-ticket .row .create-ticket-item .form-control{
+    display: inline-block;
+    width: 400px;
+}
+
+.form-control:focus{
+    border:1px solid #20A0FF;
+}
+
+.content .search-ticket-condition{
+    padding: 5px;
+    border: 1px solid #ececec;
+}
+
+.content>.search-ticket-result{
+    margin-top:20px;
+    height:auto;
+    width:100%;
+}
+
+/* preview ticket*/
+.preview-ticket{
+    width:100%;
+    height:100%;
+}
+
+.preview-ticket>.preview-edit{
+    position: relative;
+    width:100%;
+    height:50px;
+    margin-bottom:20px;
+}
+
+.preview-ticket .form-control{
+    width:400px;
+}
+
+.preview-ticket textarea{
+    resize: none;
+    border:1px solid #ececec;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 10px;
+}
+.preview-ticket textarea#preview_content{
+    width:100%;
+    min-height:400px;
+}
+
+.preview-ticket .preview-edit-button.col-md-12{
+    display: none;
+    margin-top:10px;
+}
+
+.preview-ticket textarea:focus{
+    border:1px solid #20A0FF;
+}
+
+.preview-ticket>.preview-edit>button{
+    position: absolute;
+    right: 0;
+    top:20px;
+}
+
+.preview-ticket .preview-session{
+   border:1px dashed #ececec;
+   width: 100%;
+   height: 300px;
+   margin-top: 10px;
+   padding: 10px;
+}
+
+/* search ticket */
+.bootstrap-table .table thead>tr>th {
+    font-weight: 500;
+}
+
+.table-striped>tbody>tr{
+    background-color: transparent;
+}
+
+.fixed-table-container {
+    position: relative;
+    clear: both;
+    border: 1px solid #ddd;
+     border-radius: 0;
+     -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+}
+
+.table-striped>tbody>tr:hover {
+    background-color:#E8F5FE;
+}
+
+.search-ticket-condition{
+    width:100%;
+    height:100%;
+}
+
+.search-ticket-condition .row{
+    padding: 10px;
+}
+
+.search-ticket-condition .row .col-lg-6.col-md-6.col-sm-6.col-xs-6{
+    margin-bottom: 10px;
+}
+
+.search-ticket-condition .row>.col-md-6{
+   margin-bottom: 10px;
+}
+
+.search-ticket-condition .row label{
+    font-weight: 400;
+    width: 80px;
+}
+
+.search-ticket-condition .row .form-control{
+    display: inline-block;
+    width: 400px;
+    margin-left:10px;
+}
+
+/* search knowledge */
+.search-knowledge-result,.my-ticket-result{
+    margin-top:20px;
+}
+/* my ticket */
+.my-ticket{
+    position: relative;
+}
+.my-ticket .btn-info{
+    position: absolute;
+    right: 0;
+    top:0;
+}
+
+.my-ticket>.handle-breadcrumb>li{
+    padding: 5px 30px;
+    position: relative;
+    margin-right: 8px;
+    background-color: #ececec;
+}
+
+.my-ticket>.handle-breadcrumb>li.active{
+    padding: 5px 30px;
+    position: relative;
+    margin-right: 8px;
+    background-color: #3580ff;
+}
+
+.my-ticket>.handle-breadcrumb>li::after{
+    position: absolute;
+    content: '';
+    border: 15px solid transparent;
+    border-left: 15px solid #ececec;
+    left: 100%;
+    top: 0;
+    z-index: 3;
+}
+
+.my-ticket>.handle-breadcrumb>li.active::after{
+    position: absolute;
+    content: '';
+    border: 15px solid transparent;
+    border-left: 15px solid #3580ff;
+    left: 100%;
+    top: 0;
+    z-index: 3;
+}
+
+.my-ticket>.handle-breadcrumb>li::before{
+    position: absolute;
+    content: '';
+    border:15px solid transparent;
+    border-left:15px solid #fff;
+    left:0;
+    top:0;
+}
+
+.my-ticket>.handle-breadcrumb>li.active>a{
+     color:#fff;
+ }
+
+.my-ticket>.handle-breadcrumb>li>a{
+    color:#000;
+    padding:5px 10px;
+}
+
+
+
+
+
